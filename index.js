@@ -15,7 +15,7 @@ function responseCallback(err, data, response) {
 }
 
 //Calling the stream and tracking tweets
-const stream = twitter.stream('statuses/filter', { track: `@sonoplasta_bot` });
+const stream = twitter.stream('statuses/filter', { track: `#funcionaporra` });
 
 // event handler
 stream.on('tweet', tweet => {
