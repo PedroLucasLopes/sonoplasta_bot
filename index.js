@@ -15,10 +15,10 @@ function responseCallback(err, data, response) {
 }
 
 //Calling the stream and tracking tweets
-const stream = twitter.stream('statuses/filter', { track: `#funcionaporra` });
+const stream = twitter.stream('statuses/filter', { track: "#javascript" });
 
 // event handler
 stream.on('tweet', tweet => {
-    // retweet
-    twitter.post('statuses/retweet/:id', { id: tweet.id_str }, responseCallback);
+    //Like
+    twitter.post('favorites/create', { id: tweet.id_str }, responseCallback);
 });
